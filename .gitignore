@@ -1,0 +1,8 @@
+example/*.py
+example/pet
+example/store
+example/user
+build/**
+openapi2ceres.egg-info/**
+dist/**
+__pycache__
