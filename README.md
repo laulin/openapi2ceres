@@ -27,29 +27,26 @@ foo@bar:openapi2ceres$ openapi2ceres -i /example/petstore.yaml -o example/
 The output produced :
 
 ```
-Create directory /home/foobar/openapi2ceres/example/pet
-Create directory /home/foobar/openapi2ceres/example/store
-Create directory /home/foobar/openapi2ceres/example/user
-Create file /home/foobar/openapi2ceres/example/pet/post.pet.yml
-Create file /home/foobar/openapi2ceres/example/pet/put.pet.yml
-Create file /home/foobar/openapi2ceres/example/pet/get.pet_findbystatus.yml
-Create file /home/foobar/openapi2ceres/example/pet/get.pet_findbytags.yml
-Create file /home/foobar/openapi2ceres/example/pet/get.pet_{petid}.yml
-Create file /home/foobar/openapi2ceres/example/pet/post.pet_{petid}.yml
-Create file /home/foobar/openapi2ceres/example/pet/delete.pet_{petid}.yml
-Create file /home/foobar/openapi2ceres/example/pet/post.pet_{petid}_uploadimage.yml
-Create file /home/foobar/openapi2ceres/example/store/get.store_inventory.yml
-Create file /home/foobar/openapi2ceres/example/store/post.store_order.yml
-Create file /home/foobar/openapi2ceres/example/store/get.store_order_{orderid}.yml
-Create file /home/foobar/openapi2ceres/example/store/delete.store_order_{orderid}.yml
-Create file /home/foobar/openapi2ceres/example/user/post.user.yml
-Create file /home/foobar/openapi2ceres/example/user/post.user_createwitharray.yml
-Create file /home/foobar/openapi2ceres/example/user/post.user_createwithlist.yml
-Create file /home/foobar/openapi2ceres/example/user/get.user_login.yml
-Create file /home/foobar/openapi2ceres/example/user/get.user_logout.yml
-Create file /home/foobar/openapi2ceres/example/user/get.user_{username}.yml
-Create file /home/foobar/openapi2ceres/example/user/put.user_{username}.yml
-Create file /home/foobar/openapi2ceres/example/user/delete.user_{username}.yml
+Create file /home/gignops/work/openapi2ceres/example/pet.yml
+Create file /home/gignops/work/openapi2ceres/example/pet.yml
+Create file /home/gignops/work/openapi2ceres/example/pet_findbystatus.yml
+Create file /home/gignops/work/openapi2ceres/example/pet_findbytags.yml
+Create file /home/gignops/work/openapi2ceres/example/pet_{petid}.yml
+Create file /home/gignops/work/openapi2ceres/example/pet_{petid}.yml
+Create file /home/gignops/work/openapi2ceres/example/pet_{petid}.yml
+Create file /home/gignops/work/openapi2ceres/example/pet_{petid}_uploadimage.yml
+Create file /home/gignops/work/openapi2ceres/example/store_inventory.yml
+Create file /home/gignops/work/openapi2ceres/example/store_order.yml
+Create file /home/gignops/work/openapi2ceres/example/store_order_{orderid}.yml
+Create file /home/gignops/work/openapi2ceres/example/store_order_{orderid}.yml
+Create file /home/gignops/work/openapi2ceres/example/user.yml
+Create file /home/gignops/work/openapi2ceres/example/user_createwitharray.yml
+Create file /home/gignops/work/openapi2ceres/example/user_createwithlist.yml
+Create file /home/gignops/work/openapi2ceres/example/user_login.yml
+Create file /home/gignops/work/openapi2ceres/example/user_logout.yml
+Create file /home/gignops/work/openapi2ceres/example/user_{username}.yml
+Create file /home/gignops/work/openapi2ceres/example/user_{username}.yml
+Create file /home/gignops/work/openapi2ceres/example/user_{username}.yml
 ```
 
 ## What's happen ?
@@ -89,10 +86,10 @@ The output file is named *dwarf/post.dwarf.yaml* and contains :
 
 ```yaml
 name: post.dwarf
-
-entity:
-  path: /dwarf
-  method:  post
+methods:
+  - post
+path: /dwarf
+post:
   tags:
   - "darf"
   summary: "Add a new dwarf"

@@ -5,7 +5,7 @@ with open("README.md", "r") as fh:
 
 setuptools.setup(
     name="openapi2ceres",
-    version="1.0.0",
+    version="1.1.0",
     author="Laurent MOULIN",
     author_email="gignops@noemail.com",
     description="Convert OpenAPI YAML file to Ceres files for code generation",

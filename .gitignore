@@ -1,7 +1,5 @@
 example/*.py
-example/pet
-example/store
-example/user
+example/*.yml
 build/**
 openapi2ceres.egg-info/**
 dist/**

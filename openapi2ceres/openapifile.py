@@ -27,11 +27,13 @@ class OpenAPIFile:
         # and flat them with method and data
         output = list()
         for path, methods in self._data["paths"].items():
+            tmp = dict()
+            tmp["path"] = path
+            tmp["methods"] = []
             for method, data in methods.items():
-                tmp = dict()
-                tmp["path"] = path
-                tmp["method"] = method
-                tmp.update(data)
+                tmp["methods"].append(method)
+                tmp[method] = dict()
+                tmp[method].update(data)
                 output.append(tmp)
 
         return output

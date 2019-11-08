@@ -19,4 +19,5 @@ unittest:
 
 clean:
 	rm -rf dist/ build/
+	rm example/*.yml
 	docker images | grep "<none>" | grep -o -E "[0-9a-f]{12,12}" |xargs docker rmi -f
